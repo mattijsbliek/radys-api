@@ -11,6 +11,10 @@ module.exports = createQuerySelectorAll(
       return [...instructions.querySelectorAll('li')].map(x => x.textContent);
     }
 
+    if (instructions.tagName === 'META') {
+      return instructions.content;
+    }
+
     return instructions.innerHTML
       .trim()
       .split('<p>')
