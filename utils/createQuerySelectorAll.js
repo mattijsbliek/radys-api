@@ -8,6 +8,7 @@ module.exports = (query, callback = x => x.textContent) => recipe => {
   if (!results) {
     return undefined;
   }
+  debugger;
 
   return [...results]
     .map(callback)
@@ -16,6 +17,7 @@ module.exports = (query, callback = x => x.textContent) => recipe => {
       if (Array.isArray(item)) {
         carry = carry.concat(item.filter(isNotEmpty).map(cleanup));
       } else if (isNotEmpty(item)) {
+        debugger;
         carry.push(cleanup(item));
       }
 

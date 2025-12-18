@@ -3,7 +3,6 @@ const { send, json } = require('micro');
 const { PORT = 4000 } = process.env;
 const http = require('http');
 const { JSDOM } = require('jsdom');
-const stripIndent = require('strip-indent');
 
 const { UP_STAGE, TIMBER_API_KEY } = process.env;
 
